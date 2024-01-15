@@ -7,4 +7,10 @@ describe('A suite of test for gamerTag', function () {
 
     expect(result).toBe('gamer tag ok')
   })
+
+  it('gamerTag does not have 8 characters', function () {
+    const result = gamerTag.checkGamerTag('Mat')
+
+    expect(result).toBe('Invalid - gamertag length must be at least 8 characters')
+  })
 })
